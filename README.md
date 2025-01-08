@@ -1,2 +1,2 @@
 # nvim_config
-personal neovim config
+Personal neovim config.
