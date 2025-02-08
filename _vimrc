@@ -1,0 +1,60 @@
+set clipboard=unnamed
+" Enable syntax highlighting
+syntax on
+
+" Set color scheme
+" colorscheme desert
+
+" Set GUI font (adjust font name and size as needed)
+
+set guifont=JetBrains\ Mono\ NL:h16:b
+
+
+" Enable line numbers
+set number
+" Enable relative line numbers
+set relativenumber
+
+" Set tab width and indentation settings
+set tabstop=4       " Number of spaces a tab counts for
+set shiftwidth=4    " Number of spaces for autoindent
+set expandtab       " Convert tabs to spaces
+set autoindent      " Copy indent from the current line
+set smartindent     " Auto-indent new lines
+
+"Enable highlighting for the current line
+set cursorline
+
+" Enable mouse support in GVim
+set mouse=a
+
+" Enable bracket highlighting
+set showmatch
+
+" Remove GUI menu bar and toolbar for a cleaner look
+" set guioptions-=m
+" set guioptions-=T
+
+" Faster update time
+set updatetime=300
+
+" Allow backspacing over everything
+set backspace=indent,eol,start
+
+" Enable file type detection and set appropriate indenting
+filetype plugin indent on
+
+" Enable incremental search
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+" Map F5 to compile and run C++ code (modify for your environment)
+" nnoremap <F5> :w<CR>:!g++ % -o %:r && ./%:r<CR>
+" nnoremap <F5> :w<CR>:!g++ % -o %:r && cmd /c %:r<CR>
+
+autocmd FileType cpp nnoremap <buffer> <F5> :w<CR>:!g++ % -o %:r && %:r<CR>
+autocmd FileType java nnoremap <buffer> <F5> :w<CR>:!javac % && java %:r<CR>
+autocmd FileType rust nnoremap <buffer> <F5> :w<CR>:!rustc % -o %:r && ./%:r<CR>
+" Any more F5 compilation support can be entered here.
