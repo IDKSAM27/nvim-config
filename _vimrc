@@ -64,4 +64,6 @@ autocmd FileType java nnoremap <buffer> <F5> :w<CR>:!javac % && java %:r<CR>
 " autocmd FileType rust nnoremap <buffer> <F5> :w<CR>:!rustc % -o %:r.exe && start cmd /k %:r.exe<CR>
 
 autocmd FileType rust nnoremap <buffer> <F5> :w<CR>:!rustc % -o %:r.exe && start /b cmd /k %:r.exe<CR>
+
 nnoremap <F8> :terminal cmd /K "cd /d %:p:h"<CR>
+nnoremap <S-F8> :vsplit \| terminal cmd /K "cd /d %:p:h"<CR>
