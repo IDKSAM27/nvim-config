@@ -68,4 +68,4 @@ autocmd FileType rust nnoremap <buffer> <F5> :w<CR>:!rustc % -o %:r.exe && start
 nnoremap <F8> :terminal cmd /K "cd /d %:p:h"<CR>
 nnoremap <S-F8> :vsplit \| terminal cmd /K "cd /d %:p:h"<CR>
 
-nnoremap <F9> :!wt.exe -p "Git Bash"<CR>
+nnoremap <F9> :!wt.exe -p "Git Bash" --startingDirectory "%:p:h"<CR>
