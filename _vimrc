@@ -1,3 +1,9 @@
+" If below 3 bell disabler does not work this one will def. work.
+autocmd GUIEnter * set vb t_vb=
+" Disables the error bell
+set noerrorbells
+set novisualbell
+set t_vb=
 set clipboard=unnamed
 " Enable syntax highlighting
 syntax on
