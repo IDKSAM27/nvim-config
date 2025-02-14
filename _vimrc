@@ -1,5 +1,5 @@
-" If below 3 bell disabler does not work this one will def. work.
-autocmd GUIEnter * set vb t_vb=
+" Try to add cpp format
+autocmd GUIEnter * set t_vb=
 " Disables the error bell
 set noerrorbells
 set novisualbell
@@ -9,11 +9,11 @@ set clipboard=unnamed
 syntax on
 
 " Set color scheme
-" colorscheme desert
+colorscheme blue
 
 " Set GUI font (adjust font name and size as needed)
 
-set guifont=JetBrains\ Mono\ NL:h16:b
+set guifont=JetBrains\ Mono\ NL:h14:b
 
 
 " Enable line numbers
@@ -75,3 +75,5 @@ nnoremap <F8> :terminal cmd /K "cd /d %:p:h"<CR>
 nnoremap <S-F8> :vsplit \| terminal cmd /K "cd /d %:p:h"<CR>
 
 nnoremap <F9> :!wt.exe -p "Git Bash" --startingDirectory "%:p:h"<CR>
+
+
