@@ -1,3 +1,5 @@
+" Try to add cpp format
+
 " Download solarized.vim and paste it into the
 " users/user_name/vimfiles/colors
 syntax enable
@@ -81,3 +83,13 @@ nnoremap <F8> :terminal cmd /K "cd /d %:p:h"<CR>
 nnoremap <S-F8> :vsplit \| terminal cmd /K "cd /d %:p:h"<CR>
 
 nnoremap <F9> :!wt.exe -p "Git Bash" --startingDirectory "%:p:h"<CR>
+
+
+set rtp+=C:/Users/Sampreet/fzf/.fzf
+nnoremap <C-p> :Files<CR>
+
+
+nnoremap <C-h> :wincmd h<CR> " Move left between splits
+nnoremap <C-l> :wincmd l<CR> " Move right between splits
+nnoremap <C-j> :wincmd j<CR> " Move down between splits
+nnoremap <C-k> :wincmd k<CR> " Move up between splits
