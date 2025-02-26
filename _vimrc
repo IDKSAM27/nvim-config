@@ -1,10 +1,15 @@
+" set guioptions-=r
+" set guioptions-=l
+set guioptions=
+
 " Try to add cpp format
 
 " Download solarized.vim and paste it into the
 " users/user_name/vimfiles/colors
 syntax enable
-set background=light
-colorscheme solarized
+set background=dark 
+colorscheme gruvbox     
+let g:gruvbox_transparent_bg = 1
 
 autocmd GUIEnter * set t_vb=
 " Disables the error bell
@@ -76,6 +81,7 @@ autocmd FileType java nnoremap <buffer> <F5> :w<CR>:!javac % && java %:r<CR>
 
 autocmd FileType rust nnoremap <buffer> <F5> :w<CR>:!rustc % -o %:r.exe && start /b cmd /k %:r.exe<CR>
 
+nnoremap <F5> :w<CR>:exec 'terminal cmd /c "if exist .venv\Scripts\activate (call .venv\Scripts\activate && python ' . shellescape(expand('%:p')) . ') else (python ' . shellescape(expand('%:p')) . ')"'<CR>
 " Autoload cpp template
 autocmd BufNewFile *.cpp 0r ~/.vim/templates/cpp_template.cpp
 
@@ -83,11 +89,6 @@ nnoremap <F8> :terminal cmd /K "cd /d %:p:h"<CR>
 nnoremap <S-F8> :vsplit \| terminal cmd /K "cd /d %:p:h"<CR>
 
 nnoremap <F9> :!wt.exe -p "Git Bash" --startingDirectory "%:p:h"<CR>
-
-
-set rtp+=C:/Users/Sampreet/fzf/.fzf
-nnoremap <C-p> :Files<CR>
-
 
 nnoremap <C-h> :wincmd h<CR> " Move left between splits
 nnoremap <C-l> :wincmd l<CR> " Move right between splits
