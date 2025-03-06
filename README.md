@@ -2,4 +2,4 @@
 Personal neovim config.
 
 _vimrc for windows and,
-vim.init for linux
+init.vim for linux
