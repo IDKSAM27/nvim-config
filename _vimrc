@@ -74,8 +74,7 @@ autocmd FileType cpp nnoremap <buffer> <F5> :w<CR>:!g++ % -o %:r && %:r<CR>
 autocmd FileType java nnoremap <buffer> <F5> :w<CR>:!javac % && java %:r<CR>
 " autocmd FileType rust nnoremap <buffer> <F5> :w<CR>:!rustc % -o %:r.exe && start cmd /c %:r.exe<CR>
 
-" The below 2 commands open 2 seperate terminals, one for compiling and another for
-" running .exe
+" The below 2 commands open 2 seperate terminals, one for compiling and another for running .exe
 " autocmd FileType rust nnoremap <buffer> <F5> :w<CR>:!rustc % -o %:r.exe && start cmd /k %:r.exe<CR>
 " autocmd FileType rust nnoremap <buffer> <F5> :w<CR>:!rustc % -o %:r.exe && start cmd /k %:r.exe<CR>
 
@@ -94,3 +93,4 @@ nnoremap <C-h> :wincmd h<CR> " Move left between splits
 nnoremap <C-l> :wincmd l<CR> " Move right between splits
 nnoremap <C-j> :wincmd j<CR> " Move down between splits
 nnoremap <C-k> :wincmd k<CR> " Move up between splits
+
